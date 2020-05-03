@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="username" type="java.lang.String" />
+        <variable name="message" type="java.lang.String" />
+        <variable name="date" type="java.lang.String" />
+        <variable name="icon" type="android.graphics.drawable.Drawable" />
+        <variable name="isNew" type="java.lang.Integer" />
+        <variable name="isOnline" type="java.lang.Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img_friend_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="48dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:src="@{icon}"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:text="@{username}"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Tiago Aguiar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_friend_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/txt_date"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{message}"
+            tools:text="Tiago, hoje sai um novo video de mais um inscrito aqui do canal confira agora" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txt_message"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="@{date}"
+            tools:text="Dec 17" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txt_friend_name"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@id/txt_friend_name"
+            android:background="@drawable/txt_new"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="@string/neww"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="@{isNew}" />
+
+        <View
+            android:id="@+id/view_online"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_alignTop="@id/txt_friend_name"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/view_online"
+            android:visibility="@{isOnline}"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+</layout>

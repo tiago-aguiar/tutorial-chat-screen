@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Chats" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_edit_text_normal"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="#585858"
+            android:textColorHint="#585858" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 20`}"
+                    app:icon="@{@drawable/lagertha}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Seja muito bem-vindo a nossa casa. Veja agora como você pode...`}"
+                    app:username="@{`Lagertha`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 19`}"
+                    app:icon="@{@drawable/aslaug}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Olha só. Eu não convidei você para o meu Reino Lagertha`}"
+                    app:username="@{`Aslaung`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Out 20`}"
+                    app:icon="@{@drawable/bjorn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Minha mãe é a grande Earl de Kattegat!`}"
+                    app:username="@{`BJorn`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 02`}"
+                    app:icon="@{@drawable/ragnar}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Bjorn...`}"
+                    app:username="@{`Ragnar`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Fev 20`}"
+                    app:icon="@{@drawable/hvitserk}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Alguém viu o Ivar por ai. Estou procurando ele à dias e não encontro em nenhum lugar`}"
+                    app:username="@{`Hvitserk`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Mar 20`}"
+                    app:icon="@{@drawable/porunn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Eu sou a Porunn, Para quem não me conhece ainda`}"
+                    app:username="@{`Porunn`}" />
+
+
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 20`}"
+                    app:icon="@{@drawable/lagertha}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Seja muito bem-vindo a nossa casa. Veja agora como você pode...`}"
+                    app:username="@{`Lagertha`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 19`}"
+                    app:icon="@{@drawable/aslaug}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Olha só. Eu não convidei você para o meu Reino Lagertha`}"
+                    app:username="@{`Aslaung`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Out 20`}"
+                    app:icon="@{@drawable/bjorn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Minha mãe é a grande Earl de Kattegat!`}"
+                    app:username="@{`BJorn`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 02`}"
+                    app:icon="@{@drawable/ragnar}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Bjorn...`}"
+                    app:username="@{`Ragnar`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Fev 20`}"
+                    app:icon="@{@drawable/hvitserk}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Alguém viu o Ivar por ai. Estou procurando ele à dias e não encontro em nenhum lugar`}"
+                    app:username="@{`Hvitserk`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Mar 20`}"
+                    app:icon="@{@drawable/porunn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Eu sou a Porunn, Para quem não me conhece ainda`}"
+                    app:username="@{`Porunn`}" />
+
+
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 20`}"
+                    app:icon="@{@drawable/lagertha}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Seja muito bem-vindo a nossa casa. Veja agora como você pode...`}"
+                    app:username="@{`Lagertha`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 19`}"
+                    app:icon="@{@drawable/aslaug}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Olha só. Eu não convidei você para o meu Reino Lagertha`}"
+                    app:username="@{`Aslaung`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Out 20`}"
+                    app:icon="@{@drawable/bjorn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Minha mãe é a grande Earl de Kattegat!`}"
+                    app:username="@{`BJorn`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Dez 02`}"
+                    app:icon="@{@drawable/ragnar}"
+                    app:isNew="@{android.view.View.VISIBLE}"
+                    app:isOnline="@{android.view.View.VISIBLE}"
+                    app:message="@{`Bjorn...`}"
+                    app:username="@{`Ragnar`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Fev 20`}"
+                    app:icon="@{@drawable/hvitserk}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Alguém viu o Ivar por ai. Estou procurando ele à dias e não encontro em nenhum lugar`}"
+                    app:username="@{`Hvitserk`}" />
+
+                <include
+                    layout="@layout/item_friend"
+                    app:date="@{`Mar 20`}"
+                    app:icon="@{@drawable/porunn}"
+                    app:isNew="@{android.view.View.GONE}"
+                    app:isOnline="@{android.view.View.GONE}"
+                    app:message="@{`Eu sou a Porunn, Para quem não me conhece ainda`}"
+                    app:username="@{`Porunn`}" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>
